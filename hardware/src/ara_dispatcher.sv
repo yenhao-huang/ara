@@ -1218,6 +1218,8 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
                   6'b001011: ara_req.op = ara_pkg::VXOR;
                   6'b001100: begin
                     ara_req.op = ara_pkg::VRGATHER;
+                    // Gather uses an unsigned five-bit immediate index.
+                    ara_req.scalar_op = {{ELEN{1'b0}}, insn.varith_type.rs1};
                     // The MASKU will ask for elements from vs2 through the MaskB opqueue
                     // and deshuffle them with eew_vd_op encoding
                     ara_req.eew_vd_op = eew_q[ara_req.vs2];

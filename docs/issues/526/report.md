@@ -4,7 +4,8 @@
 - Baseline: `34bd3bc152421b4601a7bf3d6e8e91ffb545c99e`
 - Fork: `yenhao-huang/ara`, branch `agent/fix-526`
 - Date: 2026-11-18
-- Fixed commit / PR: pending
+- Implementation commit: `e708ec64cb3914d261cd4b6cf7b16ac1db4a7c0c`
+- Fork PR: https://github.com/yenhao-huang/ara/pull/1 (OPEN, draft; base main)
 
 ## Acceptance criteria
 
@@ -110,4 +111,4 @@ Full-system limitation: the dedicated environment has the focused dispatcher dep
 
 Diff review: confirmed the only production RTL change is inside OPIVI VRGATHER; OPIVX scalar input and signed-immediate defaults are unchanged. The new mask test explicitly uses `tu, mu` rather than relying on the existing VSET macro's `ta, ma`. Test indices remain below VLMAX so they do not rely on the separate out-of-range fix.
 
-PR / CI: pending publication. A draft fork PR will disclose the remaining integration check.
+PR / CI: fork draft PR 1 was created and read back, with head branch `agent/fix-526`. Remote branch SHA was independently verified with `git ls-remote --heads https://github.com/yenhao-huang/ara.git agent/fix-526`. GitHub reports no checks/runs and zero registered workflows on the fork at delivery; no CI success is claimed. Only the personal fork was written. Full integration acceptance remains incomplete, and the worktree is retained.

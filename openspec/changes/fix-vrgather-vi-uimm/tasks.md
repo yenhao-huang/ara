@@ -14,4 +14,4 @@
 - [x] 3.1 Run the same dispatcher test on the fix, including signed arithmetic controls.
 - [ ] 3.2 Compile and execute the software regression where supported; record any blocked end-to-end check.
 - [x] 3.3 Validate OpenSpec, inspect the diff and record acceptance evidence.
-- [ ] 3.4 Commit, push and verify a fork-only PR; inspect CI state.
+- [x] 3.4 Commit, push and verify a fork-only PR; inspect CI state.
